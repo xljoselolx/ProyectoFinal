@@ -1,10 +1,14 @@
-body{
-margin: 0;
-padding: 0;
-font-family: 'Roboto', sans-serif;
-text-align: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
-input[type="text"], input[type="password"]{
+
+/* REVISAR NO ESTA MOSTRANDO*/
+input[type="text"], input[type="password"]
+{
   outline: none;
   padding: 20px;
   display: block;
@@ -24,4 +28,7 @@ input[type="submit"] {
   border: 0;
   border-radius: 3px;
   cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #00b8eb;
 }
