@@ -17,7 +17,7 @@ input[type="text"], input[type="password"]
   border: 1px solid #eee;
   margin: 20px auto;
 }
-
+/*menu del boton ingresar registro*/
 input[type="submit"] {
   padding: 10px;
   color: #fff;
