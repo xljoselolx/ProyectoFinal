@@ -10,10 +10,12 @@
         //vincular parametros
         $stmt->bindParam(':email', $_POST['email']);
         //guarda lavariable momentaneamente
+        //password hash cirfra la contraseña
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':password', $password);
 
         //confirmar registro
+        
         if ($stmt->execute()) {
             $message = 'Se ha registrado un nuevo usuario';
         }
@@ -22,6 +24,7 @@
         }
     }
 
+    //linea 45 muestra mensaje de registro en la pagina
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,10 +36,12 @@
         <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
+  
     <body>
     
     <?php require 'partials/header.php'?>
     <?php if (!empty($message)):?> 
+
         <p><?= $message ?></p>
     <?php endif;?>
 
@@ -47,7 +52,7 @@
       <input name="email" type="text" placeholder="Ingrese su correo">
       <input name="password" type="password" placeholder="Ingrese su contraseña ">
       <input name="confirm_password" type="password" placeholder="Confirme su contraseña ">
-      <input type="submit" value="Ingresar">
+      <input type="submit" value="Registrar">
     </form>
 
     </form>
